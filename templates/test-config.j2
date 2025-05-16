@@ -1,0 +1,17 @@
+# Test Configuration File
+# Generated at: {{ ansible_date_time.iso8601 }}
+
+[system]
+hostname = {{ ansible_hostname }}
+os = {{ ansible_distribution }} {{ ansible_distribution_version }}
+kernel = {{ ansible_kernel }}
+
+[git]
+commit = {{ lookup('pipe', 'git rev-parse HEAD') }}
+branch = {{ lookup('pipe', 'git rev-parse --abbrev-ref HEAD') }}
+
+[paths]
+test_dir = {{ test_dir }}
+log_dir = {{ test_dir }}/logs
+config_dir = {{ test_dir }}/config
+data_dir = {{ test_dir }}/data 
