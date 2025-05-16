@@ -1,5 +1,4 @@
 ---
-
 - name: Test Ansible GitOps Service with Multiple Tasks
   hosts: localhost
   gather_facts: true
